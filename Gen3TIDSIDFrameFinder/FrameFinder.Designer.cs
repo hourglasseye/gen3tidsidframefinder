@@ -40,6 +40,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.prngTextBox = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.outputGridView = new System.Windows.Forms.DataGridView();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.frameOffsetTextBox = new System.Windows.Forms.TextBox();
@@ -53,11 +54,10 @@
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.gameComboBox = new System.Windows.Forms.ComboBox();
-			this.outputGridView = new System.Windows.Forms.DataGridView();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tidTextBox
@@ -105,6 +105,8 @@
 			// 
 			// findFrameButton
 			// 
+			this.findFrameButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.findFrameButton.Location = new System.Drawing.Point(6, 309);
 			this.findFrameButton.Name = "findFrameButton";
 			this.findFrameButton.Size = new System.Drawing.Size(169, 23);
@@ -164,6 +166,9 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.outputGridView);
 			this.groupBox1.Controls.Add(this.findFrameButton);
 			this.groupBox1.Location = new System.Drawing.Point(221, 12);
@@ -172,6 +177,26 @@
 			this.groupBox1.TabIndex = 1;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Frame Finder";
+			// 
+			// outputGridView
+			// 
+			this.outputGridView.AllowUserToAddRows = false;
+			this.outputGridView.AllowUserToDeleteRows = false;
+			this.outputGridView.AllowUserToResizeColumns = false;
+			this.outputGridView.AllowUserToResizeRows = false;
+			this.outputGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.outputGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.outputGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.outputGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+			this.outputGridView.Location = new System.Drawing.Point(6, 19);
+			this.outputGridView.Name = "outputGridView";
+			this.outputGridView.ReadOnly = true;
+			this.outputGridView.RowHeadersVisible = false;
+			this.outputGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.outputGridView.Size = new System.Drawing.Size(169, 284);
+			this.outputGridView.TabIndex = 3;
 			// 
 			// groupBox2
 			// 
@@ -312,23 +337,6 @@
 			this.gameComboBox.Size = new System.Drawing.Size(100, 21);
 			this.gameComboBox.TabIndex = 5;
 			// 
-			// outputGridView
-			// 
-			this.outputGridView.AllowUserToAddRows = false;
-			this.outputGridView.AllowUserToDeleteRows = false;
-			this.outputGridView.AllowUserToResizeColumns = false;
-			this.outputGridView.AllowUserToResizeRows = false;
-			this.outputGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.outputGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.outputGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-			this.outputGridView.Location = new System.Drawing.Point(6, 19);
-			this.outputGridView.Name = "outputGridView";
-			this.outputGridView.ReadOnly = true;
-			this.outputGridView.RowHeadersVisible = false;
-			this.outputGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.outputGridView.Size = new System.Drawing.Size(169, 284);
-			this.outputGridView.TabIndex = 3;
-			// 
 			// FrameFinder
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,11 +348,11 @@
 			this.Name = "FrameFinder";
 			this.Text = "Gen 3 TID/SID Frame Finder";
 			this.groupBox1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).EndInit();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).EndInit();
 			this.ResumeLayout(false);
 
 		}
