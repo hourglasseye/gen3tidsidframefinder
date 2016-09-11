@@ -37,7 +37,6 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.pidTextBox = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.outputTextBox = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.prngTextBox = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,9 +53,11 @@
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.gameComboBox = new System.Windows.Forms.ComboBox();
+			this.outputGridView = new System.Windows.Forms.DataGridView();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tidTextBox
@@ -104,7 +105,7 @@
 			// 
 			// findFrameButton
 			// 
-			this.findFrameButton.Location = new System.Drawing.Point(0, 308);
+			this.findFrameButton.Location = new System.Drawing.Point(6, 309);
 			this.findFrameButton.Name = "findFrameButton";
 			this.findFrameButton.Size = new System.Drawing.Size(169, 23);
 			this.findFrameButton.TabIndex = 12;
@@ -141,15 +142,6 @@
 			this.label6.Text = "Desired PID";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
-			// outputTextBox
-			// 
-			this.outputTextBox.Location = new System.Drawing.Point(6, 19);
-			this.outputTextBox.Multiline = true;
-			this.outputTextBox.Name = "outputTextBox";
-			this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.outputTextBox.Size = new System.Drawing.Size(169, 283);
-			this.outputTextBox.TabIndex = 11;
-			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
@@ -172,7 +164,7 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.outputTextBox);
+			this.groupBox1.Controls.Add(this.outputGridView);
 			this.groupBox1.Controls.Add(this.findFrameButton);
 			this.groupBox1.Location = new System.Drawing.Point(221, 12);
 			this.groupBox1.Name = "groupBox1";
@@ -320,6 +312,23 @@
 			this.gameComboBox.Size = new System.Drawing.Size(100, 21);
 			this.gameComboBox.TabIndex = 5;
 			// 
+			// outputGridView
+			// 
+			this.outputGridView.AllowUserToAddRows = false;
+			this.outputGridView.AllowUserToDeleteRows = false;
+			this.outputGridView.AllowUserToResizeColumns = false;
+			this.outputGridView.AllowUserToResizeRows = false;
+			this.outputGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.outputGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.outputGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+			this.outputGridView.Location = new System.Drawing.Point(6, 19);
+			this.outputGridView.Name = "outputGridView";
+			this.outputGridView.ReadOnly = true;
+			this.outputGridView.RowHeadersVisible = false;
+			this.outputGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.outputGridView.Size = new System.Drawing.Size(169, 284);
+			this.outputGridView.TabIndex = 3;
+			// 
 			// FrameFinder
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,13 +338,13 @@
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "FrameFinder";
-			this.Text = "Form1";
+			this.Text = "Gen 3 TID/SID Frame Finder";
 			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -351,7 +360,6 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox pidTextBox;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox outputTextBox;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox prngTextBox;
 		private System.Windows.Forms.GroupBox groupBox1;
@@ -368,6 +376,7 @@
 		private System.Windows.Forms.TextBox frameOffsetTextBox;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.ComboBox gameComboBox;
+		private System.Windows.Forms.DataGridView outputGridView;
 	}
 }
 

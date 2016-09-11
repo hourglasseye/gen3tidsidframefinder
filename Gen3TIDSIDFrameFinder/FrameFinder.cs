@@ -13,11 +13,21 @@ namespace Gen3TIDSIDFrameFinder
 {
 	public partial class FrameFinder : Form
 	{
+		private DataTable outputTable;
+
 		public FrameFinder()
 		{
 			InitializeComponent();
 
 			gameComboBox.SelectedIndex = 0;
+
+			outputTable = new DataTable();
+			DataColumn[] columns = {
+				new DataColumn("Frame", typeof(int)),
+				new DataColumn("SID", typeof(ushort))
+			};
+			outputTable.Columns.AddRange(columns);
+			outputGridView.DataSource = outputTable;
 		}
 
 		private void GetMultiplierAndAdder(out uint multiplier, out uint adder)
@@ -38,6 +48,8 @@ namespace Gen3TIDSIDFrameFinder
 
 		private void OnFindFrameClick(object sender, EventArgs e)
 		{
+			outputTable.Clear();
+
 			uint pid, prng, multiplier, adder;
 			ushort tid;
 			int currentFrame, maxFrame;
@@ -50,7 +62,6 @@ namespace Gen3TIDSIDFrameFinder
 
 			GetMultiplierAndAdder(out multiplier, out adder);
 
-			List<string> lines = new List<string>();
 			uint seed = prng;
 			int frameOffset = currentFrame;
 
@@ -66,11 +77,12 @@ namespace Gen3TIDSIDFrameFinder
 				if(isShiny)
 				{
 					int emuFrame = seedFrame + frameOffset;
-					string log = string.Format("frame: {0}, sid: {1}", emuFrame, nextsid);
-					lines.Add(log);
+					DataRow row = outputTable.NewRow();
+					row["Frame"] = emuFrame;
+					row["SID"] = nextsid;
+					outputTable.Rows.Add(row);
 				}
 			}
-			outputTextBox.Lines = lines.ToArray();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
