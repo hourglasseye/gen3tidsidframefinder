@@ -34,12 +34,11 @@ namespace Gen3TIDSIDFrameFinder
 		{
 			switch(gameComboBox.SelectedIndex)
 			{
-				case 0: // Emerald
-				case 1: // FRLG
+				case 0: // Emerald/FR/LG
 					multiplier = 0x41c64e6d;
 					adder = 0x00006073;
 					break;
-				default: // Colosseum
+				default: // Colosseum/XD
 					multiplier = 0x000343FD;
 					adder = 0x00269EC3;
 					break;

@@ -37,6 +37,8 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.outputGridView = new System.Windows.Forms.DataGridView();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.acquiredSidTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.attemptedFrameTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.frameOffsetTextBox = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
@@ -45,15 +47,13 @@
 			this.label7 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.maxFrameTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.minFrameTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.prngTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.pidTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.tidTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.gameComboBox = new System.Windows.Forms.ComboBox();
-			this.minFrameTextBox = new System.Windows.Forms.MaskedTextBox();
-			this.maxFrameTextBox = new System.Windows.Forms.MaskedTextBox();
-			this.attemptedFrameTextBox = new System.Windows.Forms.MaskedTextBox();
-			this.acquiredSidTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).BeginInit();
 			this.groupBox2.SuspendLayout();
@@ -171,6 +171,22 @@
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Frame Correction";
 			// 
+			// acquiredSidTextBox
+			// 
+			this.acquiredSidTextBox.Location = new System.Drawing.Point(97, 45);
+			this.acquiredSidTextBox.Mask = "99999";
+			this.acquiredSidTextBox.Name = "acquiredSidTextBox";
+			this.acquiredSidTextBox.Size = new System.Drawing.Size(100, 20);
+			this.acquiredSidTextBox.TabIndex = 2;
+			// 
+			// attemptedFrameTextBox
+			// 
+			this.attemptedFrameTextBox.Location = new System.Drawing.Point(95, 19);
+			this.attemptedFrameTextBox.Mask = ">aaaaaaaa";
+			this.attemptedFrameTextBox.Name = "attemptedFrameTextBox";
+			this.attemptedFrameTextBox.Size = new System.Drawing.Size(100, 20);
+			this.attemptedFrameTextBox.TabIndex = 1;
+			// 
 			// label9
 			// 
 			this.label9.AutoSize = true;
@@ -254,6 +270,24 @@
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Config";
 			// 
+			// maxFrameTextBox
+			// 
+			this.maxFrameTextBox.Location = new System.Drawing.Point(95, 117);
+			this.maxFrameTextBox.Mask = "999999";
+			this.maxFrameTextBox.Name = "maxFrameTextBox";
+			this.maxFrameTextBox.Size = new System.Drawing.Size(100, 20);
+			this.maxFrameTextBox.TabIndex = 5;
+			this.maxFrameTextBox.Text = "100000";
+			// 
+			// minFrameTextBox
+			// 
+			this.minFrameTextBox.Location = new System.Drawing.Point(95, 91);
+			this.minFrameTextBox.Mask = "999999";
+			this.minFrameTextBox.Name = "minFrameTextBox";
+			this.minFrameTextBox.Size = new System.Drawing.Size(100, 20);
+			this.minFrameTextBox.TabIndex = 4;
+			this.minFrameTextBox.Text = "1";
+			// 
 			// prngTextBox
 			// 
 			this.prngTextBox.Location = new System.Drawing.Point(95, 65);
@@ -292,47 +326,12 @@
 			this.gameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.gameComboBox.FormattingEnabled = true;
 			this.gameComboBox.Items.AddRange(new object[] {
-            "Emerald",
-            "Fire Red/Leaf Green",
-            "Colosseum"});
+            "Emerald/FR/LG",
+            "Colosseum/XD"});
 			this.gameComboBox.Location = new System.Drawing.Point(95, 143);
 			this.gameComboBox.Name = "gameComboBox";
 			this.gameComboBox.Size = new System.Drawing.Size(100, 21);
 			this.gameComboBox.TabIndex = 5;
-			// 
-			// minFrameTextBox
-			// 
-			this.minFrameTextBox.Location = new System.Drawing.Point(95, 91);
-			this.minFrameTextBox.Mask = "999999";
-			this.minFrameTextBox.Name = "minFrameTextBox";
-			this.minFrameTextBox.Size = new System.Drawing.Size(100, 20);
-			this.minFrameTextBox.TabIndex = 4;
-			this.minFrameTextBox.Text = "1";
-			// 
-			// maxFrameTextBox
-			// 
-			this.maxFrameTextBox.Location = new System.Drawing.Point(95, 117);
-			this.maxFrameTextBox.Mask = "999999";
-			this.maxFrameTextBox.Name = "maxFrameTextBox";
-			this.maxFrameTextBox.Size = new System.Drawing.Size(100, 20);
-			this.maxFrameTextBox.TabIndex = 5;
-			this.maxFrameTextBox.Text = "100000";
-			// 
-			// attemptedFrameTextBox
-			// 
-			this.attemptedFrameTextBox.Location = new System.Drawing.Point(95, 19);
-			this.attemptedFrameTextBox.Mask = ">aaaaaaaa";
-			this.attemptedFrameTextBox.Name = "attemptedFrameTextBox";
-			this.attemptedFrameTextBox.Size = new System.Drawing.Size(100, 20);
-			this.attemptedFrameTextBox.TabIndex = 1;
-			// 
-			// acquiredSidTextBox
-			// 
-			this.acquiredSidTextBox.Location = new System.Drawing.Point(97, 45);
-			this.acquiredSidTextBox.Mask = "99999";
-			this.acquiredSidTextBox.Name = "acquiredSidTextBox";
-			this.acquiredSidTextBox.Size = new System.Drawing.Size(100, 20);
-			this.acquiredSidTextBox.TabIndex = 2;
 			// 
 			// FrameFinder
 			// 
