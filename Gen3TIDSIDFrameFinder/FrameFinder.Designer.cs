@@ -28,17 +28,12 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.tidTextBox = new System.Windows.Forms.TextBox();
-			this.minFrameTextBox = new System.Windows.Forms.TextBox();
-			this.maxFrameTextBox = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.findFrameButton = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
-			this.pidTextBox = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.prngTextBox = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.outputGridView = new System.Windows.Forms.DataGridView();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -48,42 +43,22 @@
 			this.adjustedFrameTextBox = new System.Windows.Forms.TextBox();
 			this.adjustFrameButton = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
-			this.acquiredSidTextBox = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.attemptedFrameTextBox = new System.Windows.Forms.TextBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.prngTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.pidTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.tidTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.gameComboBox = new System.Windows.Forms.ComboBox();
+			this.minFrameTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.maxFrameTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.attemptedFrameTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.acquiredSidTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.outputGridView)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// tidTextBox
-			// 
-			this.tidTextBox.Location = new System.Drawing.Point(95, 13);
-			this.tidTextBox.MaxLength = 6;
-			this.tidTextBox.Name = "tidTextBox";
-			this.tidTextBox.Size = new System.Drawing.Size(100, 20);
-			this.tidTextBox.TabIndex = 0;
-			this.tidTextBox.Text = "26568";
-			// 
-			// minFrameTextBox
-			// 
-			this.minFrameTextBox.Location = new System.Drawing.Point(95, 91);
-			this.minFrameTextBox.Name = "minFrameTextBox";
-			this.minFrameTextBox.Size = new System.Drawing.Size(100, 20);
-			this.minFrameTextBox.TabIndex = 3;
-			this.minFrameTextBox.Text = "4346";
-			// 
-			// maxFrameTextBox
-			// 
-			this.maxFrameTextBox.Location = new System.Drawing.Point(95, 118);
-			this.maxFrameTextBox.Name = "maxFrameTextBox";
-			this.maxFrameTextBox.Size = new System.Drawing.Size(100, 20);
-			this.maxFrameTextBox.TabIndex = 4;
-			this.maxFrameTextBox.Text = "100000";
 			// 
 			// label1
 			// 
@@ -97,7 +72,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(6, 121);
+			this.label2.Location = new System.Drawing.Point(6, 120);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(59, 13);
 			this.label2.TabIndex = 8;
@@ -110,7 +85,7 @@
 			this.findFrameButton.Location = new System.Drawing.Point(6, 309);
 			this.findFrameButton.Name = "findFrameButton";
 			this.findFrameButton.Size = new System.Drawing.Size(169, 23);
-			this.findFrameButton.TabIndex = 12;
+			this.findFrameButton.TabIndex = 2;
 			this.findFrameButton.Text = "Find Frame To Hit";
 			this.findFrameButton.UseVisualStyleBackColor = true;
 			this.findFrameButton.Click += new System.EventHandler(this.OnFindFrameClick);
@@ -123,16 +98,6 @@
 			this.label5.Size = new System.Drawing.Size(25, 13);
 			this.label5.TabIndex = 15;
 			this.label5.Text = "TID";
-			// 
-			// pidTextBox
-			// 
-			this.pidTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-			this.pidTextBox.Location = new System.Drawing.Point(95, 39);
-			this.pidTextBox.MaxLength = 8;
-			this.pidTextBox.Name = "pidTextBox";
-			this.pidTextBox.Size = new System.Drawing.Size(100, 20);
-			this.pidTextBox.TabIndex = 1;
-			this.pidTextBox.Text = "16D5C4B1";
 			// 
 			// label6
 			// 
@@ -153,16 +118,6 @@
 			this.label3.TabIndex = 20;
 			this.label3.Text = "PRNG State";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// prngTextBox
-			// 
-			this.prngTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-			this.prngTextBox.Location = new System.Drawing.Point(95, 65);
-			this.prngTextBox.MaxLength = 8;
-			this.prngTextBox.Name = "prngTextBox";
-			this.prngTextBox.Size = new System.Drawing.Size(100, 20);
-			this.prngTextBox.TabIndex = 2;
-			this.prngTextBox.Text = "ECEFF7C5";
 			// 
 			// groupBox1
 			// 
@@ -196,19 +151,19 @@
 			this.outputGridView.RowHeadersVisible = false;
 			this.outputGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.outputGridView.Size = new System.Drawing.Size(169, 284);
-			this.outputGridView.TabIndex = 3;
+			this.outputGridView.TabIndex = 1;
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.acquiredSidTextBox);
+			this.groupBox2.Controls.Add(this.attemptedFrameTextBox);
 			this.groupBox2.Controls.Add(this.label9);
 			this.groupBox2.Controls.Add(this.frameOffsetTextBox);
 			this.groupBox2.Controls.Add(this.label8);
 			this.groupBox2.Controls.Add(this.adjustedFrameTextBox);
 			this.groupBox2.Controls.Add(this.adjustFrameButton);
 			this.groupBox2.Controls.Add(this.label7);
-			this.groupBox2.Controls.Add(this.acquiredSidTextBox);
 			this.groupBox2.Controls.Add(this.label4);
-			this.groupBox2.Controls.Add(this.attemptedFrameTextBox);
 			this.groupBox2.Location = new System.Drawing.Point(12, 192);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(203, 157);
@@ -231,7 +186,7 @@
 			this.frameOffsetTextBox.Name = "frameOffsetTextBox";
 			this.frameOffsetTextBox.ReadOnly = true;
 			this.frameOffsetTextBox.Size = new System.Drawing.Size(100, 20);
-			this.frameOffsetTextBox.TabIndex = 9;
+			this.frameOffsetTextBox.TabIndex = 4;
 			// 
 			// label8
 			// 
@@ -248,14 +203,14 @@
 			this.adjustedFrameTextBox.Name = "adjustedFrameTextBox";
 			this.adjustedFrameTextBox.ReadOnly = true;
 			this.adjustedFrameTextBox.Size = new System.Drawing.Size(100, 20);
-			this.adjustedFrameTextBox.TabIndex = 10;
+			this.adjustedFrameTextBox.TabIndex = 5;
 			// 
 			// adjustFrameButton
 			// 
 			this.adjustFrameButton.Location = new System.Drawing.Point(9, 71);
 			this.adjustFrameButton.Name = "adjustFrameButton";
 			this.adjustFrameButton.Size = new System.Drawing.Size(186, 23);
-			this.adjustFrameButton.TabIndex = 8;
+			this.adjustFrameButton.TabIndex = 3;
 			this.adjustFrameButton.Text = "Adjust Frame";
 			this.adjustFrameButton.UseVisualStyleBackColor = true;
 			this.adjustFrameButton.Click += new System.EventHandler(this.button2_Click);
@@ -269,14 +224,6 @@
 			this.label7.TabIndex = 19;
 			this.label7.Text = "Acquired SID";
 			// 
-			// acquiredSidTextBox
-			// 
-			this.acquiredSidTextBox.Location = new System.Drawing.Point(95, 45);
-			this.acquiredSidTextBox.Name = "acquiredSidTextBox";
-			this.acquiredSidTextBox.Size = new System.Drawing.Size(100, 20);
-			this.acquiredSidTextBox.TabIndex = 7;
-			this.acquiredSidTextBox.Text = "392";
-			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -286,27 +233,19 @@
 			this.label4.TabIndex = 17;
 			this.label4.Text = "Attempted Frame";
 			// 
-			// attemptedFrameTextBox
-			// 
-			this.attemptedFrameTextBox.Location = new System.Drawing.Point(95, 19);
-			this.attemptedFrameTextBox.Name = "attemptedFrameTextBox";
-			this.attemptedFrameTextBox.Size = new System.Drawing.Size(100, 20);
-			this.attemptedFrameTextBox.TabIndex = 6;
-			this.attemptedFrameTextBox.Text = "26875";
-			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.maxFrameTextBox);
+			this.groupBox3.Controls.Add(this.minFrameTextBox);
+			this.groupBox3.Controls.Add(this.prngTextBox);
+			this.groupBox3.Controls.Add(this.pidTextBox);
+			this.groupBox3.Controls.Add(this.tidTextBox);
 			this.groupBox3.Controls.Add(this.label10);
 			this.groupBox3.Controls.Add(this.gameComboBox);
 			this.groupBox3.Controls.Add(this.label5);
 			this.groupBox3.Controls.Add(this.label6);
 			this.groupBox3.Controls.Add(this.label3);
-			this.groupBox3.Controls.Add(this.maxFrameTextBox);
 			this.groupBox3.Controls.Add(this.label1);
-			this.groupBox3.Controls.Add(this.tidTextBox);
-			this.groupBox3.Controls.Add(this.pidTextBox);
-			this.groupBox3.Controls.Add(this.minFrameTextBox);
-			this.groupBox3.Controls.Add(this.prngTextBox);
 			this.groupBox3.Controls.Add(this.label2);
 			this.groupBox3.Location = new System.Drawing.Point(12, 12);
 			this.groupBox3.Name = "groupBox3";
@@ -315,10 +254,34 @@
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Config";
 			// 
+			// prngTextBox
+			// 
+			this.prngTextBox.Location = new System.Drawing.Point(95, 65);
+			this.prngTextBox.Mask = ">aaaaaaaa";
+			this.prngTextBox.Name = "prngTextBox";
+			this.prngTextBox.Size = new System.Drawing.Size(100, 20);
+			this.prngTextBox.TabIndex = 3;
+			// 
+			// pidTextBox
+			// 
+			this.pidTextBox.Location = new System.Drawing.Point(95, 39);
+			this.pidTextBox.Mask = ">aaaaaaaa";
+			this.pidTextBox.Name = "pidTextBox";
+			this.pidTextBox.Size = new System.Drawing.Size(100, 20);
+			this.pidTextBox.TabIndex = 2;
+			// 
+			// tidTextBox
+			// 
+			this.tidTextBox.Location = new System.Drawing.Point(95, 13);
+			this.tidTextBox.Mask = "99999";
+			this.tidTextBox.Name = "tidTextBox";
+			this.tidTextBox.Size = new System.Drawing.Size(100, 20);
+			this.tidTextBox.TabIndex = 1;
+			// 
 			// label10
 			// 
 			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(6, 147);
+			this.label10.Location = new System.Drawing.Point(6, 146);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(35, 13);
 			this.label10.TabIndex = 22;
@@ -332,10 +295,44 @@
             "Emerald",
             "Fire Red/Leaf Green",
             "Colosseum"});
-			this.gameComboBox.Location = new System.Drawing.Point(95, 144);
+			this.gameComboBox.Location = new System.Drawing.Point(95, 143);
 			this.gameComboBox.Name = "gameComboBox";
 			this.gameComboBox.Size = new System.Drawing.Size(100, 21);
 			this.gameComboBox.TabIndex = 5;
+			// 
+			// minFrameTextBox
+			// 
+			this.minFrameTextBox.Location = new System.Drawing.Point(95, 91);
+			this.minFrameTextBox.Mask = "999999";
+			this.minFrameTextBox.Name = "minFrameTextBox";
+			this.minFrameTextBox.Size = new System.Drawing.Size(100, 20);
+			this.minFrameTextBox.TabIndex = 4;
+			this.minFrameTextBox.Text = "1";
+			// 
+			// maxFrameTextBox
+			// 
+			this.maxFrameTextBox.Location = new System.Drawing.Point(95, 117);
+			this.maxFrameTextBox.Mask = "999999";
+			this.maxFrameTextBox.Name = "maxFrameTextBox";
+			this.maxFrameTextBox.Size = new System.Drawing.Size(100, 20);
+			this.maxFrameTextBox.TabIndex = 5;
+			this.maxFrameTextBox.Text = "100000";
+			// 
+			// attemptedFrameTextBox
+			// 
+			this.attemptedFrameTextBox.Location = new System.Drawing.Point(95, 19);
+			this.attemptedFrameTextBox.Mask = ">aaaaaaaa";
+			this.attemptedFrameTextBox.Name = "attemptedFrameTextBox";
+			this.attemptedFrameTextBox.Size = new System.Drawing.Size(100, 20);
+			this.attemptedFrameTextBox.TabIndex = 1;
+			// 
+			// acquiredSidTextBox
+			// 
+			this.acquiredSidTextBox.Location = new System.Drawing.Point(97, 45);
+			this.acquiredSidTextBox.Mask = "99999";
+			this.acquiredSidTextBox.Name = "acquiredSidTextBox";
+			this.acquiredSidTextBox.Size = new System.Drawing.Size(100, 20);
+			this.acquiredSidTextBox.TabIndex = 2;
 			// 
 			// FrameFinder
 			// 
@@ -359,32 +356,32 @@
 
 		#endregion
 
-		private System.Windows.Forms.TextBox tidTextBox;
-		private System.Windows.Forms.TextBox minFrameTextBox;
-		private System.Windows.Forms.TextBox maxFrameTextBox;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button findFrameButton;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox pidTextBox;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox prngTextBox;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox adjustedFrameTextBox;
 		private System.Windows.Forms.Button adjustFrameButton;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.TextBox acquiredSidTextBox;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox attemptedFrameTextBox;
 		private System.Windows.Forms.GroupBox groupBox3;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.TextBox frameOffsetTextBox;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.ComboBox gameComboBox;
 		private System.Windows.Forms.DataGridView outputGridView;
+		private System.Windows.Forms.MaskedTextBox tidTextBox;
+		private System.Windows.Forms.MaskedTextBox pidTextBox;
+		private System.Windows.Forms.MaskedTextBox prngTextBox;
+		private System.Windows.Forms.MaskedTextBox minFrameTextBox;
+		private System.Windows.Forms.MaskedTextBox maxFrameTextBox;
+		private System.Windows.Forms.MaskedTextBox acquiredSidTextBox;
+		private System.Windows.Forms.MaskedTextBox attemptedFrameTextBox;
 	}
 }
 
