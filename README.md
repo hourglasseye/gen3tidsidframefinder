@@ -8,7 +8,7 @@ This is a tool for TID/SID emulator-based RNG manipulation on the following 3rd 
 
 This also supposedly works with the following GameCube games as well, but I can't personally attest to how well this works for these games. Someone else will have to write a guide for these:
 
-* Colosseum
+* ~~Colosseum~~ (As it stands, this tool won't work for this game)
 * XD: Gale of Darkness
 
 That said, any of the instructions below are going to be for NDS games only.
